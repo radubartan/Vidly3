@@ -1,0 +1,44 @@
+﻿@*@model Vidly3.ViewModels.RandomMovieViewModel*@
+@model IEnumerable<Vidly3.Models.Customer>
+@{
+    ViewBag.Title = "Customers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Customers</h2>
+@if (!Model.Any())
+{
+    <p>We don't have any customers yet.</p>
+}
+else
+{
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Customer</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var customer in Model)
+            {
+                <tr>
+                    <td>@Html.ActionLink(customer.Name, "Details", "Customers", new { id = customer.Id }, null)</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+@*<hr />
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>Click on the link below to view customer details: </th>
+    </tr>
+    @foreach (var customer in Model.Customers)
+    {
+        <tr>
+            <th>
+                @Html.ActionLink(@customer.Name, "DisplayCustomer", "Customers", new { id = @customer.Id }, null)
+            </th>
+        </tr>
+    }
+</table>*@
