@@ -31,6 +31,7 @@ namespace Vidly3.Controllers
             // the list of customers
             var customers = new List<Customer>
             {
+                // this is for the sake of the first commit
                 new Customer { Name = "John Smith", Id = 1 },
                 new Customer { Name = "Mary Williams", Id = 2 }
             };
