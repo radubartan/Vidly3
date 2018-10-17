@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data.Entity;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -24,29 +25,10 @@ namespace Vidly3.Controllers
             _context.Dispose();
         }
 
-        public ActionResult Index()
+        public ViewResult Index()
         {
-            var movie = new Movie() { Name = "Shrek!" };
-
-            // the list of customers
-            var customers = new List<Customer>
-            {
-                // this is for the sake of the first commit
-                new Customer { Name = "John Smith", Id = 1 },
-                new Customer { Name = "Mary Williams", Id = 2 }
-            };
-
-            var viewModel = new RandomMovieViewModel();
-            viewModel.Movie = movie;
-            viewModel.Customers = customers;
-
-            // part of the code from Vidly2
-            //return View(viewModel);
-
-            var customers2 = _context.Customers.ToList();
-            return View(customers2);
-
-            
+            var customers = _context.Customers.Include(c => c.MembershipType).ToList();
+            return View(customers); 
         }
 
         public ActionResult Details(int id)
