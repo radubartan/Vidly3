@@ -23,7 +23,7 @@ namespace Vidly3.Models
         public DbSet<Customer> Customers { get; set; }
 
         public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+            : base("DefaultConnection", throwIfV1Schema: false) //was: "RaduDbConnection" 
         {
         }
 
