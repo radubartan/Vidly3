@@ -199,6 +199,7 @@
     <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\MoviesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -234,9 +235,38 @@
     <Compile Include="Migrations\201811232325194_PopulateDateInCustomersTable.Designer.cs">
       <DependentUpon>201811232325194_PopulateDateInCustomersTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201811301938103_CreatingMoviesTable.cs" />
+    <Compile Include="Migrations\201811301938103_CreatingMoviesTable.Designer.cs">
+      <DependentUpon>201811301938103_CreatingMoviesTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812031852351_AddingGenreColumnToMoviesTable.cs" />
+    <Compile Include="Migrations\201812031852351_AddingGenreColumnToMoviesTable.Designer.cs">
+      <DependentUpon>201812031852351_AddingGenreColumnToMoviesTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812041729415_AddRecordsToMoviesTable.cs" />
+    <Compile Include="Migrations\201812041729415_AddRecordsToMoviesTable.Designer.cs">
+      <DependentUpon>201812041729415_AddRecordsToMoviesTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812102050162_DropMoviesTable.cs" />
+    <Compile Include="Migrations\201812102050162_DropMoviesTable.Designer.cs">
+      <DependentUpon>201812102050162_DropMoviesTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812111429376_CreatingGenreAndMoviesTables.cs" />
+    <Compile Include="Migrations\201812111429376_CreatingGenreAndMoviesTables.Designer.cs">
+      <DependentUpon>201812111429376_CreatingGenreAndMoviesTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812132201001_InsertRecordsIntoGenresTable.cs" />
+    <Compile Include="Migrations\201812132201001_InsertRecordsIntoGenresTable.Designer.cs">
+      <DependentUpon>201812132201001_InsertRecordsIntoGenresTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812141932560_InsertRecordsIntoMoviesTable.cs" />
+    <Compile Include="Migrations\201812141932560_InsertRecordsIntoMoviesTable.Designer.cs">
+      <DependentUpon>201812141932560_InsertRecordsIntoMoviesTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
@@ -307,6 +337,8 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Customers\Index.cshtml" />
     <Content Include="Views\Customers\Details.cshtml" />
+    <Content Include="Views\Movies\Index.cshtml" />
+    <Content Include="Views\Movies\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -343,6 +375,27 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201811232325194_PopulateDateInCustomersTable.resx">
       <DependentUpon>201811232325194_PopulateDateInCustomersTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811301938103_CreatingMoviesTable.resx">
+      <DependentUpon>201811301938103_CreatingMoviesTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812031852351_AddingGenreColumnToMoviesTable.resx">
+      <DependentUpon>201812031852351_AddingGenreColumnToMoviesTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812041729415_AddRecordsToMoviesTable.resx">
+      <DependentUpon>201812041729415_AddRecordsToMoviesTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812102050162_DropMoviesTable.resx">
+      <DependentUpon>201812102050162_DropMoviesTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812111429376_CreatingGenreAndMoviesTables.resx">
+      <DependentUpon>201812111429376_CreatingGenreAndMoviesTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812132201001_InsertRecordsIntoGenresTable.resx">
+      <DependentUpon>201812132201001_InsertRecordsIntoGenresTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812141932560_InsertRecordsIntoMoviesTable.resx">
+      <DependentUpon>201812141932560_InsertRecordsIntoMoviesTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
